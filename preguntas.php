@@ -20,21 +20,31 @@ $result = mysqli_query($conn, $query);
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
 <body>
-    <h1>Preguntas Recibidas</h1>
-    <table>
-        <tr>
-            <th>Nombre</th>
-            <th>Pregunta</th>
-            <th>Fecha</th>
-        </tr>
-        <?php while ($row = mysqli_fetch_assoc($result)): ?>
-        <tr>
-            <td><?php echo htmlspecialchars($row['name']); ?></td>
-            <td><?php echo htmlspecialchars($row['question']); ?></td>
-            <td><?php echo htmlspecialchars($row['timestamp']); ?></td>
-        </tr>
-        <?php endwhile; ?>
-    </table>
-    <a href="logout.php">Cerrar sesión</a>
+    <!-- Menú de navegación con solo el botón de cerrar sesión -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="logout.php">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Preguntas Recibidas</h1>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Pregunta</th>
+                <th>Fecha</th>
+            </tr>
+            <?php while ($row = mysqli_fetch_assoc($result)): ?>
+            <tr>
+                <td><?php echo htmlspecialchars($row['name']); ?></td>
+                <td><?php echo htmlspecialchars($row['question']); ?></td>
+                <td><?php echo htmlspecialchars($row['timestamp']); ?></td>
+            </tr>
+            <?php endwhile; ?>
+        </table>
+    </main>
 </body>
 </html>

@@ -7,15 +7,26 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
 <body>
-    <h1>Iniciar Sesión</h1>
-    <form action="process_login.php" method="POST">
-        <label for="username">Usuario:</label>
-        <input type="text" id="username" name="username" required>
-        
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required>
-        
-        <button type="submit">Iniciar Sesión</button>
-    </form>
+    <!-- Menú de navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.php">Volver</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Iniciar Sesión</h1>
+        <form action="process_login.php" method="POST">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </main>
 </body>
 </html>
